@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/c7aa64e5-7aa0-4407-b9d9-ecf246282c7d/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/ClearSight-Ecommerce",
+    "appService.deploySubpath": "."
+}
