@@ -1,0 +1,166 @@
+
+.hamburger-btn {
+    position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+        font-size: 20px;
+        background-color: transparent;
+        color: #000;
+        border: none;
+        cursor: pointer;
+    }
+    
+    /* Styling for the options list */
+    .options-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #e8e8e8;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    overflow-y: auto;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    
+    
+    }
+    
+    .options-list li {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    }
+    
+    .options-list li:last-child {
+    border-bottom: none;
+    }
+    
+    .options-list li a {
+    color: #333;
+    text-decoration: none;
+    }
+    
+    .options-list li a:hover {
+    color: #fff;
+    background-color: #333;
+    }
+    
+    #font-increase-btn,
+    #font-decrease-btn {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    }
+    
+    #font-increase-btn {
+    background-color: #4caf50;
+    }
+    
+    #font-decrease-btn {
+    background-color: #f44336;
+    }
+    
+    #font-increase-btn:hover,
+    #font-decrease-btn:hover {
+    opacity: 0.8;
+    }
+    
+    
+    
+    
+
+
+/* Styling for the hidden options list */
+.hidden {
+    display: none;
+    }
+    
+    body.dark-theme {
+      background-color: #222;
+      color: #fff;
+    }
+    
+    label {
+      color: #000; /* Change the color to whatever you prefer */
+    }
+    
+    
+    
+    /*style for dark mode*/
+    /* Toggle button styles */
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      margin: 10px;
+    }
+    
+    .toggle input[type=checkbox] {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .toggle-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 34px;
+      background-color: rgb(52, 48, 48);
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    
+    .toggle-label:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .toggle input[type=checkbox]:checked + .toggle-label {
+      background-color: #2196F3;
+    }
+    
+    .toggle input[type=checkbox]:checked + .toggle-label:before {
+      transform: translateX(26px);
+    }
+    
+    /* Sun and moon icons */
+    .toggle-label i {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      color: #FFA500; /* sun color */
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .toggle input[type=checkbox]:checked + .toggle-label i {
+      color: #C0C0C0; /* moon color */
+      left: 30px;
+    }

@@ -24,3 +24,50 @@
 i fa-microsoft {
   width: 45px;
 }
+
+
+
+.brightness-controls {
+  display: flex;
+  align-items: center;
+}
+
+#brightness {
+  flex: 1;
+  margin: 0 10px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button i {
+  font-size: 20px;
+  color: #ffc107;
+}
+
+.product-card {
+height: 500px;
+width: 100%;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+transition: all 0.3s ease-in-out;
+}
+
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.product-card .carousel-item img {
+height: 250px;
+object-fit: contain;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+filter: invert(100%);
+}
+
+

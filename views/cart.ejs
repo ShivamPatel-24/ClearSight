@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Shopping Cart UI</title>
+
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
     <style>
@@ -215,8 +215,9 @@
     return totalCount;
     };
     %>
-
+    
     <body>
+       
         <div class="CartContainer">
             <div class="Header">
                 <h3 class="Heading">Shopping Cart</h3>
@@ -229,9 +230,11 @@
                         <img src="<%= item.image %>" style="height: 120px" />
                     </div>
                     <div class="about">
+                        <br>
                         <h1 class="title">
                             <%= item.title %>
                         </h1>
+                        <br>
                         <h3 class="subtitle">
                             <%= item.subtitle %>
                         </h3>
@@ -248,8 +251,10 @@
                         </a>
                     </div>
                     <div class="prices">
+                        <br>
                         <div class="amount">
                             <%= item.amount %>
+                           
                         </div>
                         <div class="save"><u>Save for later</u></div>
                         <div class="remove"><u>Remove</u></div>
@@ -258,7 +263,7 @@
                 <% }); %>
 
 
-                    <hr>
+                    <br>
 
                     <div class="checkout">
                         <div class="total">
@@ -277,5 +282,5 @@
         </div>
     </body>
     <!-- <script src="/js/main.js"></script> -->
-
+    
 </html>

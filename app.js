@@ -55,6 +55,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+//app.use(express.static("views"));
 mongoose.set("strictQuery", true);
 app.use(morgan("dev"));
 // app.use(bodyParser.json());

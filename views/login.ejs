@@ -1,5 +1,31 @@
 <%- include('partials/header') %>
 
+<button class="hamburger-btn" onclick="toggleOptions()" title="Accessibility Menu">
+  <label>Accessibility menu ☰</label></button>
+
+<ul class="options-list hidden">
+
+
+  <button id="font-increase-btn" style="background-color: rgb(63, 63, 87);"  class="btn btn-light">Increase Font Size</button>
+  <button id="font-decrease-btn" style="background-color: rgb(66, 66, 81);" class="btn btn-light">Decrease Font Size</button>
+  
+
+<div class="mt-3">
+  <input type="range" min="50" max="200" value="125" class="slider" id="brightness"> slide to adjust the brightness
+</div>
+
+
+<div class="toggle">
+  <input type="checkbox" id="toggle-value" class="toggle-btn" onclick="toggleTheme()">
+  <label for="toggle-value" class="toggle-label"><br>Theme</label>
+</div>
+<div class="toggle">
+
+
+<script src="/js/main.js" type="text/javascript" ></script>
+<script src="/js/accesibility-main.js" type="text/javascript" ></script>
+
+</ul>
   <div align="Center">
     <img src="/logo.png" width="300" height="300" />
   </div>
@@ -18,9 +44,9 @@
       <div class="form-group mt-5">
         <button type="submit" class="form-control btn btn-dark">Login</button>
       </div>
-
-    </form>
-    <p class="text-center my-3">OR</p>
+      <body>
+    <p class="text-center my-3">
+      <label>OR</label> </p>
     <div class="card social-block">
       <a class="btn btn-block btn-social btn-microsoft text-center" href="/auth/microsoft" role="button">
         <i class="fab fa-microsoft w-25"></i>
@@ -29,7 +55,7 @@
     </div>
 
     <div class="mt-4">
-      <p class>Don't have an account?
+      <p class><label>Don't have an account? </label>
         <!-- <button class="btn btn-light"> -->
         <a class="text-primary" href='/register'>Sign up for an account</a>
         <!-- </button> -->
