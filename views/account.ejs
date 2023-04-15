@@ -4,6 +4,12 @@
     <div class="d-flex justify-content-end my-5 mx-5 px-3">
       <a href="/logout"><button class="btn btn-secondary ">Logout</button></a>
     </div>
+
+    <button id="play-button" class="btn btn-link text-decoration-none" style="font-size: 48px; position: absolute; top: 10px; left: 10px;">
+      <i class="fas fa-volume-up fa-lg"></i>
+    </button>
+
+    
     <h1 align="center" class="my-5">Dashboard</h1>
     <% [1, 2, 3].forEach(num=> { %>
       <div class="container-fluid py-5 bg-light">
@@ -60,6 +66,11 @@
 
 
         <script src="/js/main.js"></script>
+        <script src="/js/chatbot.js"></script>
+        <script>
+          play_audio('Welcome to Clear Sight Commerce! Look through our products and add items to your cart.');
+      </script>
+
   </body>
 
   </html>
