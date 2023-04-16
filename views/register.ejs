@@ -1,5 +1,6 @@
 <%- include('partials/header') %>
 
+<<<<<<< HEAD
 
 <button class="hamburger-btn" onclick="toggleOptions()" title="Accessibility Menu">
   <label>Accessibility menu ☰</label></button>
@@ -60,10 +61,58 @@
           Sign Up with Microsoft
         </a>
       </div>
+=======
+  <body>
+    <div align="Center">
+      <img src="/logo.png" width="300" height="300" />
+>>>>>>> origin/main
     </div>
 
-  </form>
+    <button id="play-button" class="btn btn-link text-decoration-none" style="font-size: 48px; position: absolute; top: 10px; left: 10px;">
+      <i class="fas fa-volume-up fa-lg"></i>
+    </button>
 
+
+    <form action="/register" method="post" class="my-0">
+      <div class="border border-5 shadow bg-white rounded" style="margin: 3% 32% 5% 32%; padding: 5% 5%">
+        <div class="form-group ">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" required placeholder="enter your email address">
+        </div>
+        <div class="form-group my-3">
+          <label for="companyName">Company</label>
+          <input type="text" class="form-control" name="companyName" required placeholder="enter your company name">
+        </div>
+        <div class="form-group my-3">
+          <label for="username">Name</label>
+          <input type="text" class="form-control" name="username" required placeholder="enter your name">
+        </div>
+        <div class="form-group my-3">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" minlength="4" maxlength="16" name="password" required
+            placeholder="enter password">
+        </div>
+        <div class="form-group mt-5">
+          <button type="submit" class="form-control btn btn-dark">Register</button>
+        </div>
+        <p class="text-center my-3">OR</p>
+        <div class="card social-block mt-3">
+          <a class="btn btn-block btn-social btn-microsoft text-center" href="/auth/microsoft" role="button">
+            <i class="fab fa-microsoft w-25"></i>
+            Sign Up with Microsoft
+          </a>
+        </div>
+      </div>
+
+    </form>
+    
+    <script src="/js/chatbot.js"></script>
+
+    <script>
+      play_audio('Welcome to the register page! Create an account or sign up with your Microsoft account.');
+    </script>
+
+  </body>
 
 
   <%- include('partials/footer') %>

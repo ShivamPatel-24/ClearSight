@@ -2,12 +2,59 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Respond to a greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Respond to a goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+
+- rule: Respond to a bot challenge
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Respond to a help request
+  steps:
+  - intent: help
+  - action: utter_help
+
+- rule: Respond to a navigation request
+  steps:
+  - intent: navigate
+  - action: utter_navigate
+
+- rule: Respond to a category selection
+  steps:
+  - intent: select_category
+  - action: utter_select_category
+
+- rule: Respond to an item addition to the cart
+  steps:
+  - intent: add_to_cart
+  - action: utter_add_to_cart
+
+- rule: Respond to an item removal from the cart
+  steps:
+  - intent: remove_from_cart
+  - action: utter_remove_from_cart
+
+- rule: Respond to a request for order status
+  steps:
+  - intent: order_status
+  - action: utter_order_status
+
+- rule: Respond to a request for order cancellation
+  steps:
+  - intent: cancel_order
+  - action: utter_cancel_order
+
+
+- rule: Respond to a request for accessibility tools
+  steps:
+  - intent: ask_accessibility_tools
+  - action: utter_ask_accessibility_tools

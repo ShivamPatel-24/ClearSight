@@ -2,3 +2,5 @@ node_modules/
 **/.DS_Store
 package-lock.json
 .env
+rasa_chatbot/actions/__pycache__/
+rasa_chatbot/.rasa/
