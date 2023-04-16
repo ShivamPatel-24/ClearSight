@@ -3,32 +3,110 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
     - hi
-    - hello there
+    - hello
+    - hey there
     - good morning
     - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
     - good afternoon
+    - greetings
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
     - bye
     - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
     - see you later
+    - see ya
+    - have a nice day
+    - farewell
+    - catch you later
+
+- intent: help
+  examples: |
+    - Can you help me?
+    - I need help
+    - Help!
+    - What can you do?
+    - How does this work?
+    - What are my options?
+    - What do you suggest?
+
+- intent: ask_accessibility_tools
+  examples: |
+    - What accessibility tools are available on this website?
+    - Can you tell me more about the accessibility options?
+    - Are there any tools to help visually impaired users?
+    - How can I change the font size?
+    - Is there an option to change the color contrast?
+    - Can I listen to audio descriptions of products?
+    - How do I use the screen reader?
+    - What is the keyboard shortcut to access the accessibility options?
+    - Can I adjust the website to be more suitable for my disability?
+
+- intent: repeat_instruction
+  examples: |
+    - Can you repeat that?
+    - I didn't understand, can you say it again?
+    - Sorry, I missed that. Could you repeat?
+
+
+- intent: navigate
+  examples: |
+    - I want to go to the home page
+    - How do I get to the search page?
+    - Take me to the products page
+    - Where do I find the contact us page?
+    - How do I view my cart?
+    - Show me the checkout page
+    - Can you take me back to the previous page?
+
+- intent: select_item
+  examples: |
+    - I want to buy a shirt
+    - Show me some shoes
+    - I need a new phone
+    - Can you recommend a laptop?
+    - I want to add a watch to my cart
+    - Find me some hats
+    - What kind of jewelry do you have?
+
+- intent: add_to_cart
+  examples: |
+    - I want to add this item to my cart
+    - Add this to my cart
+    - Put this in my cart
+    - Can you add this to my cart?
+    - This looks good, add it to my cart
+    - Add it to my shopping cart
+    - I want to buy this item
+
+- intent: remove_from_cart
+  examples: |
+    - Remove this from my cart
+    - I don't want this anymore, take it out of my cart
+    - Get rid of this from my cart
+    - I changed my mind, remove it from my cart
+    - Can you delete this from my cart?
+    - This isn't what I wanted, remove it from my cart
+
+- intent: checkout
+  examples: |
+    - I'm ready to checkout
+    - Take me to the checkout page
+    - How do I checkout?
+    - Show me my cart
+    - I want to complete my order
+    - How do I pay?
+    - Can you help me checkout?
+
+- intent: cancel_order
+  examples: |
+    - I want to cancel my order
+    - Cancel my order
+    - I changed my mind, cancel my order
+    - Can you cancel my order?
+    - This isn't what I wanted, cancel my order
+    - Take this out of my order
 
 - intent: affirm
   examples: |
