@@ -90,25 +90,7 @@ var fontSize = 16; // initial font size
   
 
   
-  function increaseFontSizeCart() {
-    var elements = document.getElementsByClassName("changeable-font-size");
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
-      var fontSize = parseFloat(style);
-      element.style.fontSize = (fontSize + 1) + 'px';
-    }
-  }
-  
-  function decreaseFontSizeCart() {
-    var elements = document.getElementsByClassName("changeable-font-size");
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
-      var fontSize = parseFloat(style);
-      element.style.fontSize = (fontSize - 1) + 'px';
-    }
-  }
+
  
   
 
@@ -124,10 +106,23 @@ var fontSize = 16; // initial font size
   }
   
   
- 
-    
 
- 
+    
+  function increaseFontSize() {
+    var h5Elements = document.getElementsByTagName('h5');
+    for (var i = 0; i < h5Elements.length; i++) {
+      var fontSize = parseInt(window.getComputedStyle(h5Elements[i], null).getPropertyValue('font-size'));
+      h5Elements[i].style.fontSize = (fontSize + 1) + 'px';
+    }
+  }
+
+  function decreaseFontSize() {
+    var h5Elements = document.getElementsByTagName('h5');
+    for (var i = 0; i < h5Elements.length; i++) {
+      var fontSize = parseInt(window.getComputedStyle(h5Elements[i], null).getPropertyValue('font-size'));
+      h5Elements[i].style.fontSize = (fontSize - 1) + 'px';
+    }
+  }
      
      
     

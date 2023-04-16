@@ -7,8 +7,12 @@
 
 <ul class="options-list hidden">
 
-  <button id="font-increase-btn" style="background-color: rgb(63, 63, 87);"  class="btn btn-light">Increase Font Size</button>
-  <button id="font-decrease-btn" style="background-color: rgb(66, 66, 81);" class="btn btn-light">Decrease Font Size</button>
+ 
+  <button id="font-increase-btn" style="background-color: rgb(63, 63, 87);"  class="btn btn-light" onclick="increaseFontSize()">Increase Font Size</button>
+  <button class="btn btn-light" id="font-decrease-btn"  style="background-color: rgb(63, 63, 87);" onclick="decreaseFontSize()">Decrease Font Size</button>
+
+
+
 <div class="mt-3">
   <input type="range" min="50" max="200" value="125" class="slider" id="brightness"> slide to adjust the brightness
 </div>
@@ -20,6 +24,8 @@
 
 
 </div>
+
+
 
 <script src="/js/main.js" type="text/javascript" ></script>
 <script src="/js/accesibility-main.js" type="text/javascript" ></script>
