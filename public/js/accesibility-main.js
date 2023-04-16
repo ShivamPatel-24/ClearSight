@@ -59,25 +59,79 @@ var fontSize = 16; // initial font size
   });
 
 
-  var brightness = 100; // initial brightness
-  var body = document.getElementsByTagName("body")[0];
-  var brightnessSlider = document.getElementById("brightness");
+  window.addEventListener('DOMContentLoaded', function() {
+    // Get the necessary elements
+    var body = document.getElementsByTagName('body')[0];
+    var brightnessSlider = document.getElementById('brightness');
+    var toggleCheckbox = document.getElementById('toggle-value');
   
-  brightnessSlider.addEventListener("input", function() {
-    brightness = brightnessSlider.value;
-    body.style.filter = "brightness(" + brightness + "%)";
+    // Set the initial brightness value
+    var brightness = 100;
+    body.style.filter = 'brightness(' + brightness + '%)';
+  
+    // Add an event listener to the brightness slider
+    brightnessSlider.addEventListener('input', function() {
+      brightness = brightnessSlider.value;
+      body.style.filter = 'brightness(' + brightness + '%)';
+    });
+  
+    // Add an event listener to the toggle checkbox
+    toggleCheckbox.addEventListener('click', function() {
+      if (toggleCheckbox.checked) {
+        body.classList.add('dark-theme');
+        body.classList.remove('light-theme');
+      } else {
+        body.classList.add('light-theme');
+        body.classList.remove('dark-theme');
+      }
+    });
   });
 
-  function toggleTheme() {
-    var body = document.getElementsByTagName("body")[0];
-    var checkbox = document.getElementById("toggle-value");
-    if (checkbox.checked) {
-      body.classList.add("dark-theme");
-      body.classList.remove("light-theme");
-    } else {
-      body.classList.add("light-theme");
-      body.classList.remove("dark-theme");
+  
+
+  
+  function increaseFontSizeCart() {
+    var elements = document.getElementsByClassName("changeable-font-size");
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+      var fontSize = parseFloat(style);
+      element.style.fontSize = (fontSize + 1) + 'px';
     }
   }
   
+  function decreaseFontSizeCart() {
+    var elements = document.getElementsByClassName("changeable-font-size");
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+      var fontSize = parseFloat(style);
+      element.style.fontSize = (fontSize - 1) + 'px';
+    }
+  }
+ 
+  
+
+  function toggleTheme() {
+    const body = document.querySelector("body");
+    const toggleValue = document.getElementById("toggle-value");
+    
+    if (toggleValue.checked) {
+      body.classList.add("dark-mode");
+    } else {
+      body.classList.remove("dark-mode");
+    }
+  }
+  
+  
+ 
+    
+
+ 
+     
+     
+    
+  
+
+
   

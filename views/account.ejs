@@ -1,4 +1,7 @@
 <%- include("partials/header") %>
+<br>
+<br>
+<br>
 <button class="hamburger-btn" onclick="toggleOptions()" title="Accessibility Menu">
   <label>Accessibility menu ☰</label></button>
 
@@ -13,8 +16,11 @@
 <div class="toggle">
   <input type="checkbox" id="toggle-value" class="toggle-btn" onclick="toggleTheme()">
   <label for="toggle-value" class="toggle-label"><br>Theme</label>
+
+
+
 </div>
-<div class="toggle">
+
 <script src="/js/main.js" type="text/javascript" ></script>
 <script src="/js/accesibility-main.js" type="text/javascript" ></script>
 
@@ -23,7 +29,7 @@
     <div class="d-flex justify-content-end my-5 mx-5 px-3">
       <a href="/logout"><button class="btn btn-secondary ">Logout</button></a>
     </div>
-    <h1 align="center" class="my-5">Dashboard</h1>
+    <h5 align="center" class="my-5">Dashboard</h5>
     <% [1, 2, 3].forEach(num=> { %>
       <div class="container-fluid py-5 bg-light">
         <div class="container">
@@ -62,11 +68,12 @@
                     <a class="carousel-control-next" href="#carouselExampleIndicators<%= num %>" role="button"
                       data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                      <span class="visually-hidden">Next</span> 
                     </a>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title"><label>Apple 2022 iPad Air (10.9-inch, Wi-Fi, 256GB) - Blue (5th Generation)</label></h5>
+                    <h5 class="card-title"><label class="my-5" >
+                      <h5>Apple 2022 iPad Air (10.9-inch, Wi-Fi, 256GB) - Blue (5th Generation)</h5></label></h5>
                     <h6 class="card-subtitle mb-2 text-muted">$679.00</h6>
                     <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                     <a href="/cart" class="btn btn-secondary view-cart-btn">View Cart</a>
