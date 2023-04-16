@@ -31,3 +31,43 @@ function increaseFontSizeCart() {
       element.style.fontSize = (fontSize - 1) + 'px';
     }
   }
+
+
+  function toggleOptions() {
+    var optionsList = document.querySelector(".options-list");
+    optionsList.classList.toggle("hidden");
+  }
+
+  const button = document.getElementById("inc-font");
+
+
+
+button.addEventListener("click", () => {
+  const label = button.innerText;
+  speak(label);
+});
+
+function speak(text) {
+  const speech = new SpeechSynthesisUtterance();
+  speech.text = text;
+  window.speechSynthesis.speak(speech);
+}
+function toggleOptions() {
+  var optionsList = document.querySelector(".options-list");
+  optionsList.classList.toggle("hidden");
+}
+
+const button2 = document.getElementById("dec-font");
+
+
+
+button2.addEventListener("click", () => {
+const label = button2.innerText;
+speak(label);
+});
+
+function speak(text) {
+const speech = new SpeechSynthesisUtterance();
+speech.text = text;
+window.speechSynthesis.speak(speech);
+}
