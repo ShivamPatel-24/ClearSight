@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'ClearSight-Ecommerce'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BD524A7F44974A19A20D85ADD885E45B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1720A5B557D74570826962AA42B1E79E }}
           package: .
