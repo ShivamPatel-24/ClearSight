@@ -9,11 +9,8 @@ intents:
 - mood_unhappy
 - bot_challenge
 - help
-- navigate
-- select_category
 - add_to_cart
 - remove_from_cart
-- order_status
 - cancel_order
 - repeat_instruction
 - ask_accessibility_tools
@@ -22,10 +19,6 @@ responses:
   utter_greet:
   - text: "Hello! Welcome to our e-commerce site. How can I assist you today?"
   
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-
   utter_did_that_help:
   - text: "Did that help you?"
 
@@ -38,26 +31,26 @@ responses:
   utter_help:
   - text: "Sure, I'm here to help. How can I assist you today?"
   
-  utter_navigate:
-  - text: "To navigate the website, you can use the tab and arrow keys. Press tab to move to the next element, and use the arrow keys to select items. You can also use the voice commands, just say 'navigate' followed by the name of the page you want to go to."
+
+  utter_register:
+  - text: "To register, enter your email, company, name, and password. You can also sign up with a Microsoft account"
+
+  utter_login:
+  - text: "To login, enter your account's email and password. Or you can use your Microsoft account."
   
-  utter_select_category:
-  - text: "To select a category, you can use the tab and arrow keys. Press tab to move to the categories section, and use the arrow keys to select a category. You can also use the voice commands, just say 'select category' followed by the name of the category you want to select."
-  
+
   utter_add_to_cart:
-  - text: "To add an item to your cart, first navigate to the item's page. Then use the tab and arrow keys to find the 'add to cart' button, and press enter to add the item to your cart. You can also use the voice commands, just say 'add to cart' followed by the name of the item you want to add."
+  - text: "To add an item to your cart, click the 'add to cart' button on your item. Click 'view cart' to see your items."
   
   utter_remove_from_cart:
-  - text: "To remove an item from your cart, first navigate to your cart page. Then use the tab and arrow keys to find the item you want to remove, and press the 'remove' button. You can also use the voice commands, just say 'remove from cart' followed by the name of the item you want to remove."
-  
-  utter_order_status:
-  - text: "To check your order status, navigate to your account page and select the 'order history' option. You can also use the voice commands, just say 'order status' followed by the order number."
-  
+  - text: "To remove an item from your cart, first navigate to your cart page. Then use the remove item button or the minus icon."
+ 
   utter_cancel_order:
-  - text: "To cancel an order, please contact customer service at [phone number or email address]."
+  - text: "To cancel an order, please contact customer service at temp@clearsight.com."
 
   utter_ask_accessibility_tools:
-  - text: "We have toolbars that will increase the font size, change the font color, and <other tools>. We also provide audio descriptions that play when you open a new page."
+  - text: "We have a menu in the top-right corner that will change the font size, brightness, and theme. Press the audio icon in the top left to play an audio description of the current page."
+  
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
