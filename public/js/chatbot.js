@@ -29,7 +29,7 @@ function speak(text) {
       window.WebChat.default(
         {
           customData: { language: "en" },
-          socketUrl: "http://localhost:5005",
+          socketUrl: "http://3.83.99.31:5005", // uses AWS EC2 IP
           socketPath: "/socket.io/",
           params: {"storage":"session"},
 
