@@ -76,7 +76,7 @@ mongoose.connect(process.env.DB_URL).then(() => {
     console.log("DB connection established");
 });
 
-app.get("/", ensureAuthenticated, async (req, res) => {
+app.get("/", async (req, res) => {
     res.render("account");
 });
 
@@ -119,10 +119,6 @@ app.get("/login", (req, res) => {
 
 app.get("/register", (req, res) => {
     res.render("register");
-});
-
-app.get("/index", (req, res) => {
-    res.render("index");
 });
 
 app.post("/login", async (req, res) => {
@@ -183,7 +179,7 @@ app.post("/register", async (req, res) => {
         });
     */
 
-        res.redirect('account')
+        res.redirect('/')
     } catch (err) {
         // Catching, logging, and sending error response status
         console.log(err);
@@ -195,7 +191,7 @@ app.get("/payment", (req, res) => {
     res.render("payment");
 });
 
-app.post("/payment", ensureAuthenticated, async (req, res) => {
+app.post("/payment", async (req, res) => {
     try {
         console.log(req.body);
         const { card_type, cc_no, ex_date, sec_code, street, city, state } = req.body;
@@ -224,6 +220,7 @@ app.post("/payment", ensureAuthenticated, async (req, res) => {
         });
 
         console.log(payment)
+        res.redirect('/cart')
         // sending success response status
     /*
         return res.status(201).send({
@@ -273,7 +270,7 @@ app.get(
     "/auth/microsoft/callback",
     passport.authenticate("microsoft", { failureRedirect: "/login" }),
     (req, res) => {
-        res.redirect("/account");
+        res.redirect("/");
     }
 );
 
@@ -304,5 +301,6 @@ function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
-    res.redirect("/login");
+    else res.redirect("/login");
 }
+
