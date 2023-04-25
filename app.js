@@ -80,38 +80,6 @@ app.get("/", async (req, res) => {
     res.render("account");
 });
 
-// // Get total item count in the cart
-// const getTotalItems = (cartItems) => {
-//     let totalCount = 0;
-//     cartItems.forEach((item) => {
-//       totalCount += item.count;
-//     });
-//     return totalCount;
-//   };
-  
-//   // Get total amount of items in the cart
-//   const getTotalAmount = (cartItems) => {
-//     let totalAmount = 0;
-//     cartItems.forEach((item) => {
-//       const price = parseFloat(item.price.replace('$', ''));
-//       totalAmount += price * item.count;
-//     });
-//     return `$${totalAmount.toFixed(2)}`;
-//   };
-
-//   function getTotalAmount(cartItems) { 
-//     let total=0; 
-//     let count=0; 
-
-//     cartItems.forEach(function (item) {
-//     const amount = parseFloat(item.amount.slice(1)); 
-//     const quantity = parseInt(item.count); 
-//     total += amount * quantity; 
-//     count += quantity; 
-//     }); 
-//     return `$${total.toFixed(2)}`; 
-// }
-
 // Route for cart page
 app.get('/cart', (req, res) => {
     res.render('cart', {
@@ -335,3 +303,4 @@ function ensureAuthenticated(req, res, next) {
     }
     else res.redirect("/login");
 }
+

@@ -1,75 +1,86 @@
 <%- include('partials/header') %>
+  <body>
+    <div align="Center">
+      <img src="/logo.png" width="300" height="300" />
+    </div>
 
-  <div align="Center">
-    <img src="/logo.png" width="300" height="300" />
-  </div>
+    <button id="play-button" class="btn btn-link text-decoration-none" style="font-size: 48px; position: absolute; top: 10px; left: 10px;">
+      <i class="fas fa-volume-up fa-lg"></i>
+    </button>
 
 
-  <div class="border border-5 shadow bg-white rounded" style="margin: 3% 20% 5% 20%; padding: 5% 5%">
-    <form action="/payment" method="POST">
-      <h4>Credit Card Info</h4>
-      <div class="row">
-        <div class="col">
-          <div class="form-group my-3">
-            <label for="card_type">Card Type:</label>
-            <div>
-              <select class="form-group" id="card_type" name="card_type">
-                <option value="visa">Visa</option>
-                <option value="mastercard">Mastercard</option>
-                <option value="american-express">American Express</option>
-                <option value="discover">Discover</option>
-              </select>
+
+    <div class="border border-5 shadow bg-white rounded" style="margin: 3% 20% 5% 20%; padding: 5% 5%">
+      <form action="/payment" method="POST">
+        <h4>Credit Card Info</h4>
+        <div class="row">
+          <div class="col">
+            <div class="form-group my-3">
+              <label for="card_type">Card Type:</label>
+              <div>
+                <select class="form-group" id="card_type" name="card_type">
+                  <option value="visa">Visa</option>
+                  <option value="mastercard">Mastercard</option>
+                  <option value="american-express">American Express</option>
+                  <option value="discover">Discover</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group my-3">
+              <label for="cc_no">CC Number</label>
+              <input type="number" class="form-control" name="cc_no" required placeholder="">
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="form-group my-3">
-            <label for="cc_no">CC Number</label>
-            <input type="number" class="form-control" name="cc_no" required placeholder="">
+        <div class="row">
+          <div class="col">
+            <div class="form-group my-4">
+              <label for="ex_date">Expiry date</label>
+              <input type="date" class="form-control" name="ex_date" required placeholder="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group my-4">
+              <label for="sec_code">Security Code</label>
+              <input type="number" class="form-control" name="sec_code" required placeholder="">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="form-group my-4">
-            <label for="ex_date">Expiry date</label>
-            <input type="date" class="form-control" name="ex_date" required placeholder="">
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-group my-4">
-            <label for="sec_code">Security Code</label>
-            <input type="number" class="form-control" name="sec_code" required placeholder="">
-          </div>
-        </div>
-      </div>
 
-      <h4 class="mt-3">Billing Address</h4>
-      <div class="form-group my-3">
-        <label for="street">Street</label>
-        <input type="text" class="form-control" name="street" required placeholder="">
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="form-group my-4">
-            <label for="city">City</label>
-            <input type="text" class="form-control" name="city" required placeholder="">
+        <h4 class="mt-3">Billing Address</h4>
+        <div class="form-group my-3">
+          <label for="street">Street</label>
+          <input type="text" class="form-control" name="street" required placeholder="">
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group my-4">
+              <label for="city">City</label>
+              <input type="text" class="form-control" name="city" required placeholder="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group my-4">
+              <label for="state">State</label>
+              <input type="text" class="form-control" name="state" required placeholder="">
+            </div>
           </div>
         </div>
-        <div class="col">
-          <div class="form-group my-4">
-            <label for="state">State</label>
-            <input type="text" class="form-control" name="state" required placeholder="">
-          </div>
-        </div>
-      </div>
+
 
 
       <div class="form-group mt-5">
         <a href="/cart"><button type="submit" class="form-control btn btn-dark">Done</button></a>
       </div>
-    </form>
+    </div>
+    
+    <script src="/js/chatbot.js"></script>
 
+    <script>
+      play_audio('Add your credit card information here.');
+    </script>
 
-  </div>
+  </body>
   <%- include('partials/footer') %>
