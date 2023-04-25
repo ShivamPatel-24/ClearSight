@@ -48,27 +48,11 @@ nlu:
     - Can you repeat that?
     - I didn't understand, can you say it again?
     - Sorry, I missed that. Could you repeat?
-
-
-- intent: navigate
-  examples: |
-    - I want to go to the home page
-    - How do I get to the search page?
-    - Take me to the products page
-    - Where do I find the contact us page?
-    - How do I view my cart?
-    - Show me the checkout page
-    - Can you take me back to the previous page?
-
-- intent: select_item
-  examples: |
-    - I want to buy a shirt
-    - Show me some shoes
-    - I need a new phone
-    - Can you recommend a laptop?
-    - I want to add a watch to my cart
-    - Find me some hats
-    - What kind of jewelry do you have?
+    - repeat that
+    - repeat
+    - Can you say that again?
+    - What did you just say?
+    - What was that?
 
 - intent: add_to_cart
   examples: |

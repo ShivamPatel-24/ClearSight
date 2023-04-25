@@ -23,16 +23,6 @@ rules:
   - intent: help
   - action: utter_help
 
-- rule: Respond to a navigation request
-  steps:
-  - intent: navigate
-  - action: utter_navigate
-
-- rule: Respond to a category selection
-  steps:
-  - intent: select_category
-  - action: utter_select_category
-
 - rule: Respond to an item addition to the cart
   steps:
   - intent: add_to_cart
@@ -42,11 +32,6 @@ rules:
   steps:
   - intent: remove_from_cart
   - action: utter_remove_from_cart
-
-- rule: Respond to a request for order status
-  steps:
-  - intent: order_status
-  - action: utter_order_status
 
 - rule: Respond to a request for order cancellation
   steps:
